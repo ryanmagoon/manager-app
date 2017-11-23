@@ -1,21 +1,21 @@
 import React, {
-  Component,
+  Component
 } from 'react';
 import {
   Picker,
-  Text,
+  Text
 } from 'react-native';
 import {
-  connect,
+  connect
 } from 'react-redux';
 import {
-  employeeUpdate,
+  employeeUpdate
 } from '../actions';
 import {
   Card,
   CardSection,
   Input,
-  Button,
+  Button
 } from './common';
 
 class EmployeeCreate extends Component {
@@ -40,7 +40,7 @@ class EmployeeCreate extends Component {
             onChangeText={value =>
               this.props.employeeUpdate({
                 prop: 'phone',
-                value,
+                value
               })
             }
           />
@@ -73,24 +73,24 @@ class EmployeeCreate extends Component {
 const styles = {
   pickerTextStyle: {
     fontSize: 18,
-    paddingLeft: 20,
-  },
+    paddingLeft: 20
+  }
 };
 
 const mapStateToProps = (state) => {
   const {
     name,
     phone,
-    shift,
+    shift
   } = state.employeeForm;
 
   return {
     name,
     phone,
-    shift,
+    shift
   };
 };
 
 export default connect(mapStateToProps, {
-  employeeUpdate,
+  employeeUpdate
 })(EmployeeCreate);
