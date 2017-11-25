@@ -32,7 +32,6 @@ const EmployeeForm = ({ name, phone, shift, employeeUpdate }) => (
     <CardSection style={{ flexDirection: 'column' }}>
       <Text style={styles.pickerTextStyle}>Shift</Text>
       <Picker
-        style={{ flex: 1 }}
         selectedValue={shift}
         onValueChange={value => employeeUpdate({ prop: 'shift', value })}
       >
