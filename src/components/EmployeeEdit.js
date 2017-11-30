@@ -29,7 +29,7 @@ class EmployeeEdit extends Component {
 
   onAccept() {
     const { uid } = this.props.employee
-    
+
     this.props.employeeDelete({ uid })
   }
 
